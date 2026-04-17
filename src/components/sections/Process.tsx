@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/Badge";
+import { FadeIn } from "@/components/ui/FadeIn";
 
 const steps = [
   {
@@ -37,18 +38,18 @@ export function Process() {
   return (
     <section id="process" className="py-24 px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <FadeIn className="text-center mb-16">
           <Badge variant="muted" className="mb-4">
             How We Work
           </Badge>
-          <h2 className="text-display-md font-bold text-white">
+          <h2 className="font-display text-display-md font-bold text-white">
             From zero to growth
             <br />
             <span className="gradient-text">in 5 steps.</span>
           </h2>
-        </div>
+        </FadeIn>
 
-        <div className="relative max-w-3xl mx-auto">
+        <FadeIn delay={100} className="relative max-w-3xl mx-auto">
           {/* Vertical line */}
           <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-brand-blue/50 via-brand-border to-transparent hidden md:block" />
 
@@ -75,7 +76,7 @@ export function Process() {
               </div>
             ))}
           </div>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

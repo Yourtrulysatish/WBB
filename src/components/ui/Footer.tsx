@@ -33,13 +33,14 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-16">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="flex items-center gap-2 mb-4 group">
-              <div className="w-8 h-8 bg-brand-blue rounded-lg flex items-center justify-center font-bold text-sm text-white group-hover:scale-105 transition-transform">
-                W
-              </div>
-              <span className="font-semibold text-white tracking-tight text-sm">
-                We Build Brands
-              </span>
+            <Link href="/" className="flex items-center mb-4 group">
+              <img
+                src="/logos/wbb-logo-alt.svg"
+                alt="We Build Brands"
+                width={70}
+                height={70}
+                className="h-8 w-auto group-hover:opacity-80 transition-opacity"
+              />
             </Link>
             <p className="text-sm text-brand-muted leading-relaxed max-w-[220px]">
               A creative growth & digital agency helping brands scale with strategy, design, and AI.

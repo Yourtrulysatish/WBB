@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/Button";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { ArrowRight, Calendar } from "lucide-react";
 
 export function CTA() {
   return (
     <section className="py-24 px-6 lg:px-8">
       <div className="max-w-4xl mx-auto text-center">
-        <div className="relative bg-brand-card card-border rounded-3xl p-12 md:p-16 overflow-hidden glow-blue">
+        <FadeIn direction="none" className="relative bg-brand-card card-border rounded-3xl p-12 md:p-16 overflow-hidden glow-blue">
           {/* Background glow */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-transparent to-indigo-600/5 pointer-events-none" />
           <div className="absolute -top-24 -right-24 w-64 h-64 rounded-full bg-blue-600/10 blur-[80px] pointer-events-none" />
@@ -16,7 +17,7 @@ export function CTA() {
               Free 30-minute strategy call
             </div>
 
-            <h2 className="text-display-md font-bold text-white mb-4">
+            <h2 className="font-display text-display-md font-bold text-white mb-4">
               Ready to build a brand
               <br />
               that compounds?
@@ -36,7 +37,7 @@ export function CTA() {
               </Button>
             </div>
           </div>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

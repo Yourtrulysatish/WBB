@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/Badge";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { Brain, Cpu, LineChart, Repeat2 } from "lucide-react";
 
 const capabilities = [
@@ -34,11 +35,11 @@ export function AILayer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left */}
-          <div>
+          <FadeIn direction="left">
             <Badge variant="blue" className="mb-6">
               AI-Enhanced
             </Badge>
-            <h2 className="text-display-md font-bold text-white mb-6">
+            <h2 className="font-display text-display-md font-bold text-white mb-6">
               We use AI as a
               <br />
               <span className="gradient-text-blue">force multiplier.</span>
@@ -52,10 +53,10 @@ export function AILayer() {
                 AI augments. Humans lead. Results compound.
               </p>
             </div>
-          </div>
+          </FadeIn>
 
           {/* Right: grid */}
-          <div className="grid grid-cols-2 gap-4">
+          <FadeIn delay={150} className="grid grid-cols-2 gap-4">
             {capabilities.map((cap) => {
               const Icon = cap.icon;
               return (
@@ -75,7 +76,7 @@ export function AILayer() {
                 </div>
               );
             })}
-          </div>
+          </FadeIn>
         </div>
       </div>
     </section>

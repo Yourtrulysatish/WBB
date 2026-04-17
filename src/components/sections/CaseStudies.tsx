@@ -1,40 +1,29 @@
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { ArrowRight, TrendingUp } from "lucide-react";
+import { FadeIn } from "@/components/ui/FadeIn";
+import { ArrowRight, Lock } from "lucide-react";
 
-const cases = [
+const previews = [
   {
     tag: "Brand + Digital",
-    title: "From zero to market leader in 8 months",
-    description:
-      "Built full brand identity, launch strategy, and digital presence for a D2C startup. Grew from 0 to 50K monthly visitors and ₹40L in revenue.",
-    metrics: [
-      { label: "Monthly Visitors", value: "50K+" },
-      { label: "Revenue Growth", value: "₹40L" },
-      { label: "Timeline", value: "8 months" },
-    ],
+    title: "D2C brand launch from zero to first ₹1Cr in revenue",
+    teaser:
+      "Full brand identity, go-to-market strategy, and digital presence built from scratch. Launched within 90 days.",
+    status: "Case study in review",
   },
   {
     tag: "SEO + Content",
-    title: "3x organic traffic in 6 months",
-    description:
-      "Rebuilt content strategy, technical SEO, and authority content for a SaaS company. Tripled organic traffic and cut CAC by 40%.",
-    metrics: [
-      { label: "Organic Growth", value: "3x" },
-      { label: "CAC Reduction", value: "40%" },
-      { label: "New Keywords", value: "280+" },
-    ],
+    title: "SaaS company — 3x organic growth in under 6 months",
+    teaser:
+      "Rebuilt content strategy and technical SEO from the ground up. Organic became their #1 acquisition channel.",
+    status: "Publishing Q3 2025",
   },
   {
     tag: "Content Production",
-    title: "Viral content engine for a founder brand",
-    description:
-      "Built a content system that generated 2M+ impressions and 10K+ followers in 90 days for a founder building in public.",
-    metrics: [
-      { label: "Total Impressions", value: "2M+" },
-      { label: "New Followers", value: "10K+" },
-      { label: "Timeline", value: "90 days" },
-    ],
+    title: "Founder content engine — 2M+ impressions in 90 days",
+    teaser:
+      "Built a high-volume short-form content system for a founder building in public. Zero paid spend.",
+    status: "Case study in review",
   },
 ];
 
@@ -42,51 +31,50 @@ export function CaseStudies() {
   return (
     <section id="work" className="py-24 px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+        <FadeIn className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-6">
           <div>
             <Badge variant="muted" className="mb-4">
               Our Work
             </Badge>
-            <h2 className="text-display-md font-bold text-white">
-              Results that speak
+            <h2 className="font-display text-display-md font-bold text-white">
+              Real work.
               <br />
-              <span className="gradient-text">for themselves.</span>
+              <span className="gradient-text">Real results.</span>
             </h2>
           </div>
           <Button href="/contact" variant="outline" size="sm">
             Work with us <ArrowRight size={14} />
           </Button>
-        </div>
+        </FadeIn>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {cases.map((c, i) => (
+        <p className="text-brand-muted text-sm mb-12 max-w-xl">
+          Detailed case studies are being prepared with client permission. Here is a preview of recent engagements.
+        </p>
+
+        <FadeIn delay={100} className="grid md:grid-cols-3 gap-6">
+          {previews.map((c, i) => (
             <div
               key={i}
-              className="bg-brand-card card-border rounded-2xl p-8 hover:border-white/10 transition-colors"
+              className="bg-brand-card card-border rounded-2xl p-8 hover:border-white/10 transition-colors flex flex-col justify-between"
             >
-              <Badge variant="blue" className="mb-6 text-[10px]">
-                {c.tag}
-              </Badge>
-              <h3 className="text-lg font-semibold text-white mb-3 leading-snug">
-                {c.title}
-              </h3>
-              <p className="text-sm text-brand-muted mb-8 leading-relaxed">
-                {c.description}
-              </p>
-              <div className="grid grid-cols-3 gap-4 pt-6 border-t border-brand-border">
-                {c.metrics.map((m) => (
-                  <div key={m.label}>
-                    <div className="flex items-center gap-1 text-lg font-bold text-white mb-1">
-                      <TrendingUp size={14} className="text-brand-blue flex-shrink-0" />
-                      {m.value}
-                    </div>
-                    <p className="text-[10px] text-brand-muted leading-tight">{m.label}</p>
-                  </div>
-                ))}
+              <div>
+                <Badge variant="blue" className="mb-6 text-[10px]">
+                  {c.tag}
+                </Badge>
+                <h3 className="text-lg font-semibold text-white mb-3 leading-snug">
+                  {c.title}
+                </h3>
+                <p className="text-sm text-brand-muted leading-relaxed">
+                  {c.teaser}
+                </p>
+              </div>
+              <div className="mt-8 pt-6 border-t border-brand-border flex items-center gap-2 text-xs text-brand-muted">
+                <Lock size={11} className="text-brand-blue/60" />
+                {c.status}
               </div>
             </div>
           ))}
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

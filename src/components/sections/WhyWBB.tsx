@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/Badge";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { Globe, Users, Rocket, Shield } from "lucide-react";
 
 const reasons = [
@@ -32,18 +33,18 @@ export function WhyWBB() {
   return (
     <section className="py-24 px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <FadeIn className="text-center mb-16">
           <Badge variant="muted" className="mb-4">
             Why WBB
           </Badge>
-          <h2 className="text-display-md font-bold text-white">
+          <h2 className="font-display text-display-md font-bold text-white">
             We&apos;re not another agency.
             <br />
             <span className="gradient-text">We&apos;re your growth team.</span>
           </h2>
-        </div>
+        </FadeIn>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <FadeIn delay={100} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {reasons.map((r) => {
             const Icon = r.icon;
             return (
@@ -63,10 +64,10 @@ export function WhyWBB() {
               </div>
             );
           })}
-        </div>
+        </FadeIn>
 
         {/* Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <FadeIn delay={200} className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             { value: "50+", label: "Brands Built" },
             { value: "3+", label: "Years of Growth" },
@@ -77,7 +78,7 @@ export function WhyWBB() {
               key={stat.label}
               className="text-center p-6 bg-brand-card card-border rounded-2xl"
             >
-              <div className="text-display-md font-bold text-white mb-1">
+              <div className="font-display text-display-md font-bold text-white mb-1">
                 {stat.value}
               </div>
               <div className="text-xs text-brand-muted uppercase tracking-wide">
@@ -85,7 +86,7 @@ export function WhyWBB() {
               </div>
             </div>
           ))}
-        </div>
+        </FadeIn>
       </div>
     </section>
   );

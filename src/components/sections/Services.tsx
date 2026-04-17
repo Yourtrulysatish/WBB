@@ -1,5 +1,6 @@
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { ArrowRight, Layers, BarChart2, Zap } from "lucide-react";
 import Link from "next/link";
 
@@ -37,11 +38,11 @@ export function ServicesOverview() {
   return (
     <section className="py-24 px-6 lg:px-8 bg-[#080808]">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <FadeIn className="text-center mb-16">
           <Badge variant="muted" className="mb-4">
             What We Do
           </Badge>
-          <h2 className="text-display-md font-bold text-white mb-4">
+          <h2 className="font-display text-display-md font-bold text-white mb-4">
             Three pillars.
             <br />
             <span className="gradient-text">One compounding engine.</span>
@@ -49,9 +50,9 @@ export function ServicesOverview() {
           <p className="text-brand-muted max-w-xl mx-auto">
             Brand, Digital, and Content work independently. With WBB, they work together as one system that compounds.
           </p>
-        </div>
+        </FadeIn>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <FadeIn delay={100} className="grid md:grid-cols-3 gap-6 mb-12">
           {pillars.map((pillar) => {
             const Icon = pillar.icon;
             return (
@@ -86,7 +87,7 @@ export function ServicesOverview() {
               </Link>
             );
           })}
-        </div>
+        </FadeIn>
 
         <div className="text-center">
           <Button href="/services" variant="outline">

@@ -50,7 +50,7 @@ export default function AboutPage() {
           <Badge variant="muted" className="mb-6">
             About Us
           </Badge>
-          <h1 className="text-display-lg font-bold text-white mb-6">
+          <h1 className="font-display text-display-lg font-bold text-white mb-6">
             We Build Brands that
             <br />
             <span className="gradient-text-blue">compound over time.</span>
@@ -68,7 +68,7 @@ export default function AboutPage() {
             <Badge variant="muted" className="mb-6">
               Our Story
             </Badge>
-            <h2 className="text-display-md font-bold text-white mb-6">
+            <h2 className="font-display text-display-md font-bold text-white mb-6">
               Built from a simple
               <br />
               <span className="gradient-text">belief.</span>
@@ -110,7 +110,7 @@ export default function AboutPage() {
           <Badge variant="blue" className="mb-6">
             Our Mission
           </Badge>
-          <blockquote className="text-display-md font-bold text-white">
+          <blockquote className="font-display text-display-md font-bold text-white">
             &ldquo;To help ambitious brands build{" "}
             <span className="gradient-text-blue">impactful and scalable compounding growth</span>
             {" "}through strategy, creativity, and technology.&rdquo;
@@ -129,7 +129,7 @@ export default function AboutPage() {
             <Badge variant="muted" className="mb-4">
               Our Values
             </Badge>
-            <h2 className="text-display-md font-bold text-white">
+            <h2 className="font-display text-display-md font-bold text-white">
               How we show up
               <br />
               <span className="gradient-text">every single day.</span>
@@ -162,7 +162,7 @@ export default function AboutPage() {
             <Badge variant="muted" className="mb-4">
               The Team
             </Badge>
-            <h2 className="text-display-md font-bold text-white">
+            <h2 className="font-display text-display-md font-bold text-white">
               The humans behind
               <br />
               <span className="gradient-text">your growth.</span>
@@ -188,7 +188,7 @@ export default function AboutPage() {
       {/* CTA */}
       <section className="py-24 px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-display-md font-bold text-white mb-4">
+          <h2 className="font-display text-display-md font-bold text-white mb-4">
             Ready to build something great?
           </h2>
           <p className="text-brand-muted mb-8">

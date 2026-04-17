@@ -7,6 +7,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 import { Process } from "@/components/sections/Process";
 import { AILayer } from "@/components/sections/AILayer";
 import { WhyWBB } from "@/components/sections/WhyWBB";
+import { MidCTA } from "@/components/sections/MidCTA";
 import { CTA } from "@/components/sections/CTA";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <Process />
       <AILayer />
       <WhyWBB />
+      <MidCTA />
       <CTA />
     </>
   );

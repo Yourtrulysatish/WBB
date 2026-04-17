@@ -12,7 +12,7 @@ export default function TermsPage() {
       <section className="py-24 px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           <Badge variant="muted" className="mb-6">Legal</Badge>
-          <h1 className="text-display-md font-bold text-white mb-4">Terms of Service</h1>
+          <h1 className="font-display text-display-md font-bold text-white mb-4">Terms of Service</h1>
           <p className="text-sm text-brand-muted mb-12">Last updated: April 2025</p>
 
           <div className="prose prose-invert max-w-none space-y-10 text-sm text-brand-muted leading-relaxed">

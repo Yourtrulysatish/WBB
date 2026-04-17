@@ -45,13 +45,14 @@ export function Navbar() {
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 bg-brand-blue rounded-lg flex items-center justify-center font-bold text-sm text-white group-hover:scale-105 transition-transform">
-            W
-          </div>
-          <span className="font-semibold text-white tracking-tight">
-            We Build Brands
-          </span>
+        <Link href="/" className="flex items-center group">
+          <img
+            src="/logos/wbb-logo-alt.svg"
+            alt="We Build Brands"
+            width={80}
+            height={80}
+            className="h-10 w-auto group-hover:opacity-90 transition-opacity"
+          />
         </Link>
 
         {/* Desktop Nav */}

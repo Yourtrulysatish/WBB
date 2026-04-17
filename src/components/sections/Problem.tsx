@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/Badge";
+import { FadeIn } from "@/components/ui/FadeIn";
 import { X, Check } from "lucide-react";
 
 const problems = [
@@ -21,16 +22,16 @@ export function Problem() {
   return (
     <section className="py-24 px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <FadeIn className="text-center mb-16">
           <Badge variant="muted" className="mb-4">
             The Problem
           </Badge>
-          <h2 className="text-display-md font-bold text-white">
+          <h2 className="font-display text-display-md font-bold text-white">
             Most brands plateau.
             <br />
             <span className="gradient-text">Yours doesn&apos;t have to.</span>
           </h2>
-        </div>
+        </FadeIn>
 
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {/* Problems */}

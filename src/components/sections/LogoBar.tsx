@@ -1,34 +1,23 @@
-export function LogoBar() {
-  const brands = [
-    "Brand One",
-    "Growth Co",
-    "StartupX",
-    "FounderLab",
-    "ScaleUp",
-    "Momentum",
-    "BuildCo",
-    "LaunchPad",
-  ];
+import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
+import { ArrowRight } from "lucide-react";
 
+export function LogoBar() {
   return (
-    <section className="py-14 border-y border-brand-border overflow-hidden">
-      <p className="text-center text-xs font-medium uppercase tracking-widest text-brand-muted mb-8">
-        Trusted by ambitious brands
-      </p>
-      <div className="relative flex overflow-x-hidden">
-        <div className="flex gap-16 animate-marquee whitespace-nowrap">
-          {[...brands, ...brands].map((b, i) => (
-            <span
-              key={i}
-              className="text-sm font-semibold text-white/20 tracking-wider uppercase"
-            >
-              {b}
-            </span>
-          ))}
+    <section className="py-14 border-y border-brand-border">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <Badge variant="blue" className="mb-3">Currently building</Badge>
+          <p className="text-white font-semibold text-lg">
+            Our full portfolio is being assembled.
+          </p>
+          <p className="text-brand-muted text-sm mt-1 max-w-md">
+            We are working with real brands right now. Case studies and client work will be published here soon — with permission.
+          </p>
         </div>
-        {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-brand-black to-transparent pointer-events-none z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-brand-black to-transparent pointer-events-none z-10" />
+        <Button href="/contact" variant="outline" size="sm">
+          See what we can do for you <ArrowRight size={14} />
+        </Button>
       </div>
     </section>
   );

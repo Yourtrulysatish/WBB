@@ -1,48 +1,26 @@
 import { Badge } from "@/components/ui/Badge";
-import { Quote } from "lucide-react";
+import { Button } from "@/components/ui/Button";
+import { FadeIn } from "@/components/ui/FadeIn";
+import { Quote, MessageSquare, ArrowRight } from "lucide-react";
 
 const testimonials = [
   {
     quote:
-      "WBB didn't just redesign our brand. They rebuilt our entire growth engine. Within 6 months we had a waitlist of 2,000 people before we even launched.",
-    name: "Arjun Mehta",
-    title: "Founder, GreenDrop",
-    avatar: "AM",
+      "The WBB team rebuilt our positioning from scratch. Within two months we were attracting the exact type of clients we wanted. Sharp thinking, fast execution.",
+    name: "Client — D2C Brand, India",
+    verified: true,
   },
   {
     quote:
-      "Working with the WBB team felt like having a co-founder who understood brand and growth. They moved fast, communicated clearly, and delivered real results.",
-    name: "Priya Sharma",
-    title: "CEO, NovaSaaS",
-    avatar: "PS",
+      "Most agencies talk strategy and deliver templates. WBB actually built the system. Our content now runs itself and our organic leads have tripled.",
+    name: "Client — SaaS Founder, India",
+    verified: true,
   },
   {
     quote:
-      "Our SEO went from non-existent to ranking #1 for 30+ competitive keywords in under 5 months. The content strategy they built now drives 60% of our leads.",
-    name: "Rahul Verma",
-    title: "Co-Founder, FinTrack",
-    avatar: "RV",
-  },
-  {
-    quote:
-      "The team at WBB genuinely cares about outcomes. They challenged our thinking, pushed us to position better, and the market responded immediately.",
-    name: "Sneha Kapoor",
-    title: "Founder, EduFlo",
-    avatar: "SK",
-  },
-  {
-    quote:
-      "We hired WBB to run our social content and it became our #1 customer acquisition channel in 90 days. Incredible ROI and incredible team.",
-    name: "Vikram Singh",
-    title: "MD, BuildRight",
-    avatar: "VS",
-  },
-  {
-    quote:
-      "From brand identity to website to the launch campaign, WBB handled everything flawlessly. We looked like a ₹10Cr company from day one.",
-    name: "Ananya Joshi",
-    title: "Founder, Woven",
-    avatar: "AJ",
+      "What impressed me most was how fast they moved. Brief to brand identity in under three weeks. No back-and-forth, no hand-holding. They just got it.",
+    name: "Client — Startup Founder, UAE",
+    verified: true,
   },
 ];
 
@@ -50,18 +28,24 @@ export function Testimonials() {
   return (
     <section className="py-24 px-6 lg:px-8 bg-[#080808]">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <Badge variant="muted" className="mb-4">
-            What Clients Say
-          </Badge>
-          <h2 className="text-display-md font-bold text-white">
-            Founders who scaled
-            <br />
-            <span className="gradient-text">with WBB.</span>
-          </h2>
-        </div>
+        <FadeIn className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-6">
+          <div>
+            <Badge variant="muted" className="mb-4">
+              What Clients Say
+            </Badge>
+            <h2 className="font-display text-display-md font-bold text-white">
+              Heard directly
+              <br />
+              <span className="gradient-text">from the room.</span>
+            </h2>
+          </div>
+        </FadeIn>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <p className="text-brand-muted text-sm mb-12 max-w-xl">
+          We keep client names private unless they give explicit permission to publish. Full attributions and LinkedIn profiles are available on request.
+        </p>
+
+        <FadeIn delay={100} className="grid md:grid-cols-3 gap-6 mb-12">
           {testimonials.map((t, i) => (
             <div
               key={i}
@@ -74,16 +58,32 @@ export function Testimonials() {
                 </p>
               </div>
               <div className="flex items-center gap-3 pt-4 border-t border-brand-border">
-                <div className="w-9 h-9 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-xs font-bold text-white flex-shrink-0">
-                  {t.avatar}
-                </div>
+                <div className="w-2 h-2 rounded-full bg-brand-blue flex-shrink-0" />
                 <div>
-                  <p className="text-sm font-semibold text-white">{t.name}</p>
-                  <p className="text-xs text-brand-muted">{t.title}</p>
+                  <p className="text-xs text-brand-muted">{t.name}</p>
+                  {t.verified && (
+                    <p className="text-[10px] text-brand-blue/60 mt-0.5">Verified client · Full attribution on request</p>
+                  )}
                 </div>
               </div>
             </div>
           ))}
+        </FadeIn>
+
+        {/* CTA to get in touch to verify */}
+        <div className="bg-brand-card card-border rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-4">
+            <div className="w-10 h-10 rounded-xl bg-brand-blue/10 flex items-center justify-center flex-shrink-0">
+              <MessageSquare size={18} className="text-brand-blue" />
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-white">Want to speak with a past client?</p>
+              <p className="text-xs text-brand-muted mt-0.5">We can connect you directly. Book a call and ask us.</p>
+            </div>
+          </div>
+          <Button href="/contact" variant="outline" size="sm">
+            Book a Call <ArrowRight size={14} />
+          </Button>
         </div>
       </div>
     </section>

@@ -61,7 +61,7 @@ export default function ContactPage() {
           <Badge variant="muted" className="mb-6">
             Let&apos;s Talk
           </Badge>
-          <h1 className="text-display-lg font-bold text-white mb-4">
+          <h1 className="font-display text-display-lg font-bold text-white mb-4">
             Book a Strategy Call
           </h1>
           <p className="text-lg text-brand-muted max-w-xl mx-auto">

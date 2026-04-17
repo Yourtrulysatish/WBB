@@ -108,7 +108,7 @@ export default function ServicesPage() {
           <Badge variant="muted" className="mb-6">
             Services
           </Badge>
-          <h1 className="text-display-lg font-bold text-white mb-6">
+          <h1 className="font-display text-display-lg font-bold text-white mb-6">
             Everything you need to
             <br />
             <span className="gradient-text-blue">build and scale.</span>
@@ -145,7 +145,7 @@ export default function ServicesPage() {
                       {pillar.label}
                     </Badge>
                   </div>
-                  <h2 className="text-display-md font-bold text-white mb-4">
+                  <h2 className="font-display text-display-md font-bold text-white mb-4">
                     {pillar.title}
                   </h2>
                   <p className="text-lg font-medium text-white/80 mb-4">
@@ -188,7 +188,7 @@ export default function ServicesPage() {
             <Badge variant="muted" className="mb-4">
               Add-ons
             </Badge>
-            <h2 className="text-display-md font-bold text-white">
+            <h2 className="font-display text-display-md font-bold text-white">
               On-demand services
             </h2>
             <p className="text-brand-muted mt-3 max-w-xl mx-auto">
@@ -218,7 +218,7 @@ export default function ServicesPage() {
       {/* Bottom CTA */}
       <section className="py-16 px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-display-md font-bold text-white mb-4">
+          <h2 className="font-display text-display-md font-bold text-white mb-4">
             Not sure where to start?
           </h2>
           <p className="text-brand-muted mb-8">

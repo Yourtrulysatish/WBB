@@ -9,7 +9,7 @@ const pillars = [
     label: "Brand",
     title: "Build a brand people remember",
     description:
-      "From positioning to visual identity — we craft brands that stand out, command premium prices, and build loyalty.",
+      "From positioning to visual identity, we craft brands that stand out, command premium prices, and build loyalty.",
     services: ["Brand Strategy", "Brand Identity", "Visual Design", "Brand Guidelines"],
     href: "/services#brand",
   },
@@ -47,7 +47,7 @@ export function ServicesOverview() {
             <span className="gradient-text">One compounding engine.</span>
           </h2>
           <p className="text-brand-muted max-w-xl mx-auto">
-            Brand, Digital, and Content work independently. With WBB, they work together — as a system that compounds.
+            Brand, Digital, and Content work independently. With WBB, they work together as one system that compounds.
           </p>
         </div>
 

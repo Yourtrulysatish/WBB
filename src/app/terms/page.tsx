@@ -34,7 +34,7 @@ export default function TermsPage() {
             <div>
               <h2 className="text-base font-semibold text-white mb-3">3. Intellectual Property</h2>
               <p className="mb-3">
-                All content on this Site — including text, design, graphics, and code — is the property of We Build Brands and protected by applicable intellectual property laws.
+                All content on this Site, including text, design, graphics, and code, is the property of We Build Brands and protected by applicable intellectual property laws.
               </p>
               <p>
                 Work created for clients becomes the client&apos;s property upon full payment, as outlined in individual service agreements. WBB retains the right to showcase completed work in its portfolio unless otherwise agreed in writing.

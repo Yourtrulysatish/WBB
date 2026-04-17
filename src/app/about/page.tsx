@@ -13,7 +13,7 @@ const values = [
   {
     icon: Target,
     title: "Outcomes over output",
-    desc: "We measure success by what moves your business forward — not by deliverables checked off a list.",
+    desc: "We measure success by what actually moves your business forward, not by deliverables checked off a list.",
   },
   {
     icon: Users,
@@ -23,7 +23,7 @@ const values = [
   {
     icon: Heart,
     title: "Craft in everything",
-    desc: "We take pride in doing excellent work — in every strategy doc, every design, every word we write.",
+    desc: "We take pride in doing excellent work. In every strategy doc, every design, every word we write.",
   },
   {
     icon: ArrowRight,
@@ -56,7 +56,7 @@ export default function AboutPage() {
             <span className="gradient-text-blue">compound over time.</span>
           </h1>
           <p className="text-lg text-brand-muted max-w-2xl leading-relaxed">
-            WBB is a creative growth and digital agency founded in Ayodhya, India. We partner with ambitious founders and companies to build brands that grow, convert, and compound — month after month.
+            WBB is a creative growth and digital agency founded in Ayodhya, India. We partner with ambitious founders and companies to build brands that grow, convert, and compound. Month after month.
           </p>
         </div>
       </section>
@@ -78,7 +78,7 @@ export default function AboutPage() {
                 WBB started from a simple observation: most brands don&apos;t fail because of bad products. They fail because of bad positioning, inconsistent presence, and siloed teams that never create a compounding growth engine.
               </p>
               <p>
-                We built WBB to fix that. By combining brand strategy, digital marketing, and content under one roof — with AI systems woven through everything — we help brands build momentum that accelerates, not stalls.
+                We built WBB to fix that. By combining brand strategy, digital marketing, and content under one roof, with AI systems woven through everything, we help brands build momentum that accelerates instead of stalling.
               </p>
               <p>
                 Today we work with startups, founders, and growth-stage companies across India and globally. Every client gets a team that thinks like a co-founder, executes like an agency, and cares like a partner.
@@ -113,7 +113,7 @@ export default function AboutPage() {
           <blockquote className="text-display-md font-bold text-white">
             &ldquo;To help ambitious brands build{" "}
             <span className="gradient-text-blue">impactful and scalable compounding growth</span>
-            {" "}— through strategy, creativity, and technology.&rdquo;
+            {" "}through strategy, creativity, and technology.&rdquo;
           </blockquote>
           <div className="mt-8 flex items-center justify-center gap-2 text-sm text-brand-muted">
             <MapPin size={14} />

@@ -28,9 +28,9 @@ export default function PrivacyPage() {
               <h2 className="text-base font-semibold text-white mb-3">2. Information We Collect</h2>
               <p className="mb-3">We collect the following types of information:</p>
               <ul className="list-disc pl-5 space-y-2">
-                <li><strong className="text-white/80">Contact information</strong> — Name, email address, company name, and any message you submit through our contact form.</li>
-                <li><strong className="text-white/80">Usage data</strong> — Pages visited, time on site, browser type, and device info via Google Analytics (anonymized).</li>
-                <li><strong className="text-white/80">Cookies</strong> — We use essential cookies for site functionality and analytics cookies (with your consent) via Google Analytics.</li>
+                <li><strong className="text-white/80">Contact information</strong>: your name, email address, company name, and any message you submit through our contact form.</li>
+                <li><strong className="text-white/80">Usage data</strong>: pages visited, time on site, browser type, and device info via Google Analytics (anonymized).</li>
+                <li><strong className="text-white/80">Cookies</strong>: we use essential cookies for site functionality and analytics cookies (with your consent) via Google Analytics.</li>
               </ul>
             </div>
 

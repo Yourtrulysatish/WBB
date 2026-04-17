@@ -23,7 +23,7 @@ export function CTA() {
             </h2>
 
             <p className="text-brand-muted mb-10 max-w-lg mx-auto">
-              Book a free strategy call. We&apos;ll audit your current brand and growth, and show you exactly where the biggest opportunities are — no strings attached.
+              Book a free strategy call. We will audit your brand and growth, show you exactly where the biggest opportunities are, and you walk away with a clear picture. No strings attached.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

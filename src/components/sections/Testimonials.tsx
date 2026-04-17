@@ -4,7 +4,7 @@ import { Quote } from "lucide-react";
 const testimonials = [
   {
     quote:
-      "WBB didn't just redesign our brand — they rebuilt our entire growth engine. Within 6 months we had a waitlist of 2,000 people before we even launched.",
+      "WBB didn't just redesign our brand. They rebuilt our entire growth engine. Within 6 months we had a waitlist of 2,000 people before we even launched.",
     name: "Arjun Mehta",
     title: "Founder, GreenDrop",
     avatar: "AM",
@@ -39,7 +39,7 @@ const testimonials = [
   },
   {
     quote:
-      "From brand identity to website to launch campaign — WBB handled everything flawlessly. We looked like a ₹10Cr company from day one.",
+      "From brand identity to website to the launch campaign, WBB handled everything flawlessly. We looked like a ₹10Cr company from day one.",
     name: "Ananya Joshi",
     title: "Founder, Woven",
     avatar: "AJ",

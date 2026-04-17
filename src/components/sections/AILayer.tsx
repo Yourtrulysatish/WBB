@@ -6,13 +6,13 @@ const capabilities = [
     icon: Brain,
     title: "AI-Assisted Content",
     description:
-      "We use AI to research, outline, and accelerate content at 5x speed — then our humans make it world-class.",
+      "We use AI to research, outline, and accelerate content at 5x speed. Then our team makes it world-class.",
   },
   {
     icon: Cpu,
     title: "Automated Growth Systems",
     description:
-      "From lead nurturing to social scheduling — we build AI workflows that work while you sleep.",
+      "From lead nurturing to social scheduling, we build AI workflows that keep working while you sleep.",
   },
   {
     icon: LineChart,
@@ -24,7 +24,7 @@ const capabilities = [
     icon: Repeat2,
     title: "Compounding Feedback Loops",
     description:
-      "Systems that learn and improve every month — your growth gets faster, not slower, over time.",
+      "Systems that learn and improve every month, so your growth gets faster over time, not slower.",
   },
 ];
 
@@ -44,7 +44,7 @@ export function AILayer() {
               <span className="gradient-text-blue">force multiplier.</span>
             </h2>
             <p className="text-brand-muted leading-relaxed mb-8">
-              We don&apos;t replace human creativity with AI — we use it to move faster, go deeper, and compound results. Every service we deliver is enhanced by AI-powered systems built specifically for your brand.
+              We don&apos;t replace human creativity with AI. We use it to move faster, go deeper, and compound results. Every service we deliver is enhanced by AI systems built specifically for your brand.
             </p>
             <div className="flex items-center gap-3 px-4 py-3 bg-blue-500/5 border border-blue-500/15 rounded-xl">
               <div className="w-2 h-2 rounded-full bg-blue-500 animate-pulse" />

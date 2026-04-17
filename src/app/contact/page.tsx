@@ -82,7 +82,7 @@ export default function ContactPage() {
                 {[
                   "A 30-minute video or phone call",
                   "We audit your brand, digital, and content",
-                  "You get a clear growth brief — free",
+                  "You get a clear growth brief, completely free",
                   "No pressure, no commitment",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">

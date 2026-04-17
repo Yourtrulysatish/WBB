@@ -68,7 +68,7 @@ export function Hero() {
           style={{ animationDelay: "0.2s", animationFillMode: "both" }}
         >
           Strategy. Design. Content. AI-powered systems. We partner with
-          startups and founders to build brands that compound — month over month,
+          startups and founders to build brands that keep growing. Month over month,
           year over year.
         </p>
 

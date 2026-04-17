@@ -11,7 +11,7 @@ const steps = [
     num: "02",
     title: "Growth Audit",
     description:
-      "We audit your brand, digital presence, and content — mapping gaps and opportunities into a clear growth brief.",
+      "We audit your brand, digital presence, and content. Every gap and opportunity gets mapped into a clear growth brief.",
   },
   {
     num: "03",
@@ -23,13 +23,13 @@ const steps = [
     num: "04",
     title: "Build & Execute",
     description:
-      "Our team executes fast — brand, content, campaigns, and systems — operating as your embedded growth team.",
+      "Our team executes fast on brand, content, campaigns, and systems, operating as your embedded growth team.",
   },
   {
     num: "05",
     title: "Measure & Compound",
     description:
-      "We track what moves the needle, double down on what works, and iterate monthly — building compounding momentum.",
+      "We track what moves the needle, double down on what works, and iterate every month to build compounding momentum.",
   },
 ];
 

@@ -12,13 +12,13 @@ const reasons = [
     icon: Users,
     title: "Global team, founder mindset",
     description:
-      "Based in Ayodhya, working globally. We think like founders, not vendors — because we've built brands of our own.",
+      "Based in Ayodhya, working globally. We think like founders, not vendors, because we have built brands of our own.",
   },
   {
     icon: Globe,
     title: "360° execution",
     description:
-      "Brand, digital, content, and growth — all under one roof. No briefing five different agencies. One team, one vision.",
+      "Brand, digital, content, and growth all under one roof. No briefing five different agencies. One team, one vision.",
   },
   {
     icon: Shield,

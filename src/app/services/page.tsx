@@ -6,7 +6,7 @@ import { ArrowRight, Layers, BarChart2, Zap, Search, Palette, Smartphone } from 
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Brand strategy, digital marketing, SEO, content production, and AI-powered growth systems — built to compound.",
+    "Brand strategy, digital marketing, SEO, content production, and AI-powered growth systems built to compound.",
 };
 
 const pillars = [
@@ -15,9 +15,9 @@ const pillars = [
     icon: Layers,
     label: "Pillar 01",
     title: "Brand",
-    headline: "Build a brand people trust — and remember.",
+    headline: "Build a brand people trust and remember.",
     description:
-      "Your brand is your most valuable asset. We build it from the ground up — from positioning strategy to visual identity — so it commands attention, builds trust, and justifies premium pricing.",
+      "Your brand is your most valuable asset. We build it from the ground up, from positioning strategy to visual identity, so it commands attention, builds trust, and justifies premium pricing.",
     services: [
       {
         name: "Brand Strategy",
@@ -44,7 +44,7 @@ const pillars = [
     title: "Digital",
     headline: "Grow with precision, not guesswork.",
     description:
-      "We run data-driven digital marketing strategies that compound over time — turning your digital presence into your most reliable lead generation engine.",
+      "We run data-driven digital marketing strategies that compound over time, turning your digital presence into your most reliable lead generation engine.",
     services: [
       {
         name: "SEO",
@@ -71,7 +71,7 @@ const pillars = [
     title: "Content & Growth",
     headline: "Create content that builds authority and drives pipeline.",
     description:
-      "Content is the fuel of compounding growth. We build content systems — not one-off pieces — powered by strategy, production, and AI to keep you top-of-mind and top-of-funnel.",
+      "Content is the fuel of compounding growth. We build content systems, not one-off pieces, powered by strategy, production, and AI to keep you top of mind and top of funnel.",
     services: [
       {
         name: "Content Strategy",
@@ -114,7 +114,7 @@ export default function ServicesPage() {
             <span className="gradient-text-blue">build and scale.</span>
           </h1>
           <p className="text-lg text-brand-muted max-w-2xl mx-auto mb-10">
-            Three core pillars — Brand, Digital, and Content & Growth — engineered to work together as a compounding system.
+            Three core pillars: Brand, Digital, and Content & Growth, engineered to work together as one compounding system.
           </p>
           <Button href="/contact" size="lg">
             Book a Strategy Call

@@ -76,7 +76,7 @@ export function Hero() {
           className="text-lg text-brand-muted max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-up"
           style={{ animationDelay: "0.2s", animationFillMode: "both" }}
         >
-          WBB is a full-stack creative and growth agency. We handle brand strategy, digital marketing, and content as one system — so your brand keeps growing without you managing five different vendors.
+          WBB is a creative and growth agency. We handle brand strategy, digital marketing, and content as one system. Your brand keeps growing without you managing five different vendors.
         </p>
 
         <div

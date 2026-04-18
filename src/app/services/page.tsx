@@ -6,7 +6,7 @@ import { ArrowRight, Layers, BarChart2, Zap, Search, Palette, Smartphone } from 
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Brand strategy, digital marketing, SEO, content production, and AI-powered growth systems built to compound.",
+    "Brand strategy, digital marketing, SEO, content production, and AI powered growth systems built to compound.",
 };
 
 const pillars = [
@@ -44,7 +44,7 @@ const pillars = [
     title: "Digital",
     headline: "Grow with precision, not guesswork.",
     description:
-      "We run data-driven digital marketing strategies that compound over time, turning your digital presence into your most reliable lead generation engine.",
+      "We run performance driven digital marketing strategies that compound over time, turning your digital presence into your most reliable lead generation engine.",
     services: [
       {
         name: "SEO",
@@ -71,15 +71,15 @@ const pillars = [
     title: "Content & Growth",
     headline: "Create content that builds authority and drives pipeline.",
     description:
-      "Content is the fuel of compounding growth. We build content systems, not one-off pieces, powered by strategy, production, and AI to keep you top of mind and top of funnel.",
+      "Content is the fuel of compounding growth. We build content systems, not single pieces, powered by strategy, production, and AI to keep you top of mind and top of funnel.",
     services: [
       {
         name: "Content Strategy",
-        desc: "A full-funnel content roadmap aligned to your growth goals and audience.",
+        desc: "A full funnel content roadmap aligned to your growth goals and audience.",
       },
       {
         name: "Video & Photo Production",
-        desc: "High-quality content that tells your brand story across channels.",
+        desc: "Quality content that tells your brand story across channels.",
       },
       {
         name: "Copywriting",
@@ -94,8 +94,8 @@ const pillars = [
 ];
 
 const addons = [
-  { icon: Search, name: "SEO Audit", desc: "Full technical and content audit with a 90-day action plan." },
-  { icon: Palette, name: "UI/UX Design", desc: "Product and website design that converts visitors to customers." },
+  { icon: Search, name: "SEO Audit", desc: "Full technical and content audit with a 90 day action plan." },
+  { icon: Palette, name: "UI/UX Design", desc: "Product and website design built to convert visitors into customers." },
   { icon: Smartphone, name: "Web Development", desc: "Fast, modern websites and landing pages built to perform." },
 ];
 

@@ -12,7 +12,7 @@ export function LogoBar() {
             Our full portfolio is being assembled.
           </p>
           <p className="text-brand-muted text-sm mt-1 max-w-md">
-            We are working with real brands right now. Case studies and client work will be published here soon — with permission.
+            We are working with real brands right now. Case studies and client work will be published here soon, with permission.
           </p>
         </div>
         <Button href="/contact" variant="outline" size="sm">

@@ -13,16 +13,16 @@ const previews = [
   },
   {
     tag: "SEO + Content",
-    title: "SaaS company — 3x organic growth in under 6 months",
+    title: "SaaS company: 3x organic growth in under 6 months",
     teaser:
       "Rebuilt content strategy and technical SEO from the ground up. Organic became their #1 acquisition channel.",
     status: "Publishing Q3 2025",
   },
   {
     tag: "Content Production",
-    title: "Founder content engine — 2M+ impressions in 90 days",
+    title: "Founder content engine: 2M+ impressions in 90 days",
     teaser:
-      "Built a high-volume short-form content system for a founder building in public. Zero paid spend.",
+      "Built a high volume short form content system for a founder building in public. Zero paid spend.",
     status: "Case study in review",
   },
 ];

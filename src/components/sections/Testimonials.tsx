@@ -7,19 +7,19 @@ const testimonials = [
   {
     quote:
       "The WBB team rebuilt our positioning from scratch. Within two months we were attracting the exact type of clients we wanted. Sharp thinking, fast execution.",
-    name: "Client — D2C Brand, India",
+    name: "Client, D2C Brand, India",
     verified: true,
   },
   {
     quote:
       "Most agencies talk strategy and deliver templates. WBB actually built the system. Our content now runs itself and our organic leads have tripled.",
-    name: "Client — SaaS Founder, India",
+    name: "Client, SaaS Founder, India",
     verified: true,
   },
   {
     quote:
-      "What impressed me most was how fast they moved. Brief to brand identity in under three weeks. No back-and-forth, no hand-holding. They just got it.",
-    name: "Client — Startup Founder, UAE",
+      "What impressed me most was how fast they moved. Brief to brand identity in under three weeks. No endless revisions, no micromanaging. They just got it.",
+    name: "Client, Startup Founder, UAE",
     verified: true,
   },
 ];

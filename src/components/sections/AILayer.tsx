@@ -5,7 +5,7 @@ import { Brain, Cpu, LineChart, Repeat2 } from "lucide-react";
 const capabilities = [
   {
     icon: Brain,
-    title: "AI-Assisted Content",
+    title: "AI Assisted Content",
     description:
       "We use AI to research, outline, and accelerate content at 5x speed. Then our team makes it world-class.",
   },
@@ -19,7 +19,7 @@ const capabilities = [
     icon: LineChart,
     title: "Predictive Analytics",
     description:
-      "AI-powered reporting that tells you what worked, why it worked, and what to do next.",
+      "AI powered reporting that tells you what worked, why it worked, and what to do next.",
   },
   {
     icon: Repeat2,

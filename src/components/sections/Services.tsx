@@ -19,7 +19,7 @@ const pillars = [
     label: "Digital",
     title: "Grow with precision and velocity",
     description:
-      "Data-driven digital marketing, SEO, and paid strategies that compound over time and drive measurable pipeline.",
+      "Performance driven digital marketing, SEO, and paid strategies that compound over time and drive measurable pipeline.",
     services: ["SEO & Content", "Paid Ads", "Social Media", "Email Marketing"],
     href: "/services#digital",
   },
@@ -28,7 +28,7 @@ const pillars = [
     label: "Content & Growth",
     title: "Create content that converts",
     description:
-      "High-impact content, production, and AI-powered growth systems that keep your brand top-of-mind and top-of-funnel.",
+      "High impact content, production, and AI powered growth systems that keep your brand top of mind and top of funnel.",
     services: ["Content Strategy", "Video Production", "Copywriting", "AI Growth Systems"],
     href: "/services#content",
   },

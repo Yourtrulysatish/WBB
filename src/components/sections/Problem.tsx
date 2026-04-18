@@ -14,7 +14,7 @@ const solutions = [
   "Systems that generate leads while you sleep",
   "A premium brand that commands higher prices",
   "Content that builds authority and drives pipeline",
-  "Razor-sharp positioning that wins in the market",
+  "Sharp positioning that wins in the market",
   "An agency that operates as your growth team",
 ];
 

@@ -49,34 +49,41 @@ export function Process() {
           </h2>
         </FadeIn>
 
-        <FadeIn delay={100} className="relative max-w-3xl mx-auto">
+        <div className="relative max-w-3xl mx-auto">
           {/* Vertical line */}
           <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-brand-blue/50 via-brand-border to-transparent hidden md:block" />
 
-          <div className="space-y-8">
+          <div className="space-y-2">
             {steps.map((step, i) => (
-              <div
+              <FadeIn
                 key={i}
-                className="relative flex gap-8 group"
+                delay={i * 100}
+                direction="left"
+                className="relative flex gap-8 group py-4"
               >
+                {/* Active connector dot on the vertical line */}
+                <div className="absolute left-[18px] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-brand-blue/0 group-hover:bg-brand-blue/60 transition-colors duration-300 hidden md:block z-20" />
+
                 {/* Step number */}
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-brand-card card-border flex items-center justify-center text-xs font-bold text-brand-blue z-10 group-hover:border-brand-blue/30 group-hover:bg-brand-blue/5 transition-colors">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-brand-card card-border flex items-center justify-center text-xs font-bold text-brand-blue z-10 group-hover:border-brand-blue/40 group-hover:bg-brand-blue/5 group-hover:shadow-[0_0_20px_rgba(37,99,235,0.15)] transition-all duration-300">
                   {step.num}
                 </div>
 
                 {/* Content */}
-                <div className="pt-2.5 pb-4">
-                  <h3 className="text-base font-semibold text-white mb-2">
-                    {step.title}
-                  </h3>
+                <div className="pt-2.5 pb-4 flex-1">
+                  <div className="flex items-baseline gap-3 mb-2">
+                    <h3 className="text-base font-semibold text-white group-hover:text-blue-100 transition-colors duration-200">
+                      {step.title}
+                    </h3>
+                  </div>
                   <p className="text-sm text-brand-muted leading-relaxed">
                     {step.description}
                   </p>
                 </div>
-              </div>
+              </FadeIn>
             ))}
           </div>
-        </FadeIn>
+        </div>
       </div>
     </section>
   );

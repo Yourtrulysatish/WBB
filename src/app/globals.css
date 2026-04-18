@@ -95,4 +95,60 @@ body::before {
     pointer-events: none;
     z-index: 0;
   }
+
+  .shimmer-text {
+    background: linear-gradient(
+      90deg,
+      #6B7280 0%,
+      #ffffff 30%,
+      #6B7280 60%,
+      #ffffff 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s linear infinite;
+  }
+
+  .glow-red {
+    box-shadow: 0 0 40px rgba(239, 68, 68, 0.08);
+  }
+
+  .gradient-border-top {
+    position: relative;
+  }
+
+  .gradient-border-top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    border-radius: 16px 16px 0 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .gradient-border-top:hover::before {
+    opacity: 1;
+  }
+
+  .gradient-border-top-brand::before {
+    background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.6), transparent);
+  }
+
+  .gradient-border-top-digital::before {
+    background: linear-gradient(90deg, transparent, rgba(139, 92, 246, 0.6), transparent);
+  }
+
+  .gradient-border-top-content::before {
+    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.6), transparent);
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
 }

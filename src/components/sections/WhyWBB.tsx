@@ -1,6 +1,9 @@
+"use client";
+
 import { Badge } from "@/components/ui/Badge";
 import { FadeIn } from "@/components/ui/FadeIn";
 import { Globe, Users, Rocket, Shield } from "lucide-react";
+import { useRef, useEffect, useState } from "react";
 
 const reasons = [
   {
@@ -29,6 +32,66 @@ const reasons = [
   },
 ];
 
+const stats = [
+  { value: 50, suffix: "+", label: "Brands Built" },
+  { value: 3, suffix: "+", label: "Years of Growth" },
+  { value: 12, suffix: "+", label: "Team Members" },
+  { value: 5, suffix: "", label: "Countries Served" },
+];
+
+function AnimatedStat({ value, suffix, label }: { value: number; suffix: string; label: string }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [count, setCount] = useState(0);
+  const [started, setStarted] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !started) {
+          setStarted(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.4 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [started]);
+
+  useEffect(() => {
+    if (!started) return;
+    let start = 0;
+    const duration = 1200;
+    const step = 16;
+    const steps = duration / step;
+    const increment = value / steps;
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= value) {
+        setCount(value);
+        clearInterval(timer);
+      } else {
+        setCount(Math.floor(start));
+      }
+    }, step);
+    return () => clearInterval(timer);
+  }, [started, value]);
+
+  return (
+    <div
+      ref={ref}
+      className="text-center p-6 bg-brand-card card-border rounded-2xl hover:border-white/10 transition-colors group"
+    >
+      <div className="font-display text-display-md font-bold text-white mb-1 tabular-nums">
+        {count}{suffix}
+      </div>
+      <div className="text-xs text-brand-muted uppercase tracking-wide">{label}</div>
+    </div>
+  );
+}
+
 export function WhyWBB() {
   return (
     <section className="py-24 px-6 lg:px-8">
@@ -50,9 +113,11 @@ export function WhyWBB() {
             return (
               <div
                 key={r.title}
-                className="bg-brand-card card-border rounded-2xl p-6 hover:border-white/10 transition-colors"
+                className="bg-brand-card card-border rounded-2xl p-6 hover:border-white/10 transition-colors group relative overflow-hidden"
               >
-                <div className="w-10 h-10 rounded-xl bg-brand-blue/10 flex items-center justify-center mb-4">
+                {/* Hover top accent */}
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="w-10 h-10 rounded-xl bg-brand-blue/10 flex items-center justify-center mb-4 group-hover:bg-brand-blue/20 transition-colors">
                   <Icon size={18} className="text-brand-blue" />
                 </div>
                 <h3 className="text-sm font-semibold text-white mb-2">
@@ -66,25 +131,10 @@ export function WhyWBB() {
           })}
         </FadeIn>
 
-        {/* Stats */}
+        {/* Animated stats */}
         <FadeIn delay={200} className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { value: "50+", label: "Brands Built" },
-            { value: "3+", label: "Years of Growth" },
-            { value: "12+", label: "Team Members" },
-            { value: "5", label: "Countries Served" },
-          ].map((stat) => (
-            <div
-              key={stat.label}
-              className="text-center p-6 bg-brand-card card-border rounded-2xl"
-            >
-              <div className="font-display text-display-md font-bold text-white mb-1">
-                {stat.value}
-              </div>
-              <div className="text-xs text-brand-muted uppercase tracking-wide">
-                {stat.label}
-              </div>
-            </div>
+          {stats.map((stat) => (
+            <AnimatedStat key={stat.label} {...stat} />
           ))}
         </FadeIn>
       </div>

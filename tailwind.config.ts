@@ -37,11 +37,47 @@ const config: Config = {
           "0%": { opacity: "0", transform: "translateY(24px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-18px)" },
+        },
+        "float-slow": {
+          "0%, 100%": { transform: "translateY(0px) translateX(0px)" },
+          "33%": { transform: "translateY(-12px) translateX(6px)" },
+          "66%": { transform: "translateY(6px) translateX(-4px)" },
+        },
+        breathe: {
+          "0%, 100%": { opacity: "0.04", transform: "scale(1)" },
+          "50%": { opacity: "0.08", transform: "scale(1.15)" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "-200% center" },
+          "100%": { backgroundPosition: "200% center" },
+        },
+        "count-up": {
+          "0%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
+        },
+        "border-spin": {
+          "0%": { "--border-angle": "0deg" },
+          "100%": { "--border-angle": "360deg" },
+        },
+        "slide-in-step": {
+          "0%": { opacity: "0", transform: "translateX(-16px)" },
+          "100%": { opacity: "1", transform: "translateX(0)" },
+        },
       },
       animation: {
         marquee: "marquee 30s linear infinite",
         "marquee-slow": "marquee 50s linear infinite",
         "fade-up": "fade-up 0.6s ease forwards",
+        float: "float 6s ease-in-out infinite",
+        "float-slow": "float-slow 9s ease-in-out infinite",
+        "float-slower": "float-slow 13s ease-in-out infinite",
+        breathe: "breathe 5s ease-in-out infinite",
+        shimmer: "shimmer 3s linear infinite",
+        "count-up": "count-up 0.5s ease forwards",
+        "slide-in-step": "slide-in-step 0.5s ease forwards",
       },
     },
   },

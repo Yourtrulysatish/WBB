@@ -8,29 +8,44 @@ const pillars = [
   {
     icon: Layers,
     label: "Brand",
+    num: "01",
     title: "Build a brand people remember",
     description:
       "From positioning to visual identity, we craft brands that stand out, command premium prices, and build loyalty.",
     services: ["Brand Strategy", "Brand Identity", "Visual Design", "Brand Guidelines"],
     href: "/services#brand",
+    accentColor: "rgba(37,99,235,0.6)",
+    glowColor: "rgba(37,99,235,0.06)",
+    hoverBorder: "hover:border-blue-500/30",
+    iconBg: "bg-blue-500/10 group-hover:bg-blue-500/20",
   },
   {
     icon: BarChart2,
     label: "Digital",
+    num: "02",
     title: "Grow with precision and velocity",
     description:
       "Performance driven digital marketing, SEO, and paid strategies that compound over time and drive measurable pipeline.",
     services: ["SEO & Content", "Paid Ads", "Social Media", "Email Marketing"],
     href: "/services#digital",
+    accentColor: "rgba(139,92,246,0.6)",
+    glowColor: "rgba(139,92,246,0.06)",
+    hoverBorder: "hover:border-violet-500/30",
+    iconBg: "bg-violet-500/10 group-hover:bg-violet-500/20",
   },
   {
     icon: Zap,
     label: "Content & Growth",
+    num: "03",
     title: "Create content that converts",
     description:
       "High impact content, production, and AI powered growth systems that keep your brand top of mind and top of funnel.",
     services: ["Content Strategy", "Video Production", "Copywriting", "AI Growth Systems"],
     href: "/services#content",
+    accentColor: "rgba(16,185,129,0.6)",
+    glowColor: "rgba(16,185,129,0.06)",
+    hoverBorder: "hover:border-emerald-500/30",
+    iconBg: "bg-emerald-500/10 group-hover:bg-emerald-500/20",
   },
 ];
 
@@ -59,9 +74,28 @@ export function ServicesOverview() {
               <Link
                 key={pillar.label}
                 href={pillar.href}
-                className="group bg-brand-card card-border rounded-2xl p-8 hover:border-brand-blue/30 hover:bg-brand-card-hover transition-all duration-300"
+                className={`group bg-brand-card card-border rounded-2xl p-8 ${pillar.hoverBorder} hover:bg-brand-card-hover transition-all duration-300 relative overflow-hidden`}
+                style={{
+                  "--hover-glow": pillar.glowColor,
+                } as React.CSSProperties}
               >
-                <div className="w-10 h-10 rounded-xl bg-brand-blue/10 flex items-center justify-center mb-6 group-hover:bg-brand-blue/20 transition-colors">
+                {/* Colored top accent line */}
+                <div
+                  className="absolute top-0 left-0 right-0 h-px opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{
+                    background: `linear-gradient(90deg, transparent, ${pillar.accentColor}, transparent)`,
+                  }}
+                />
+
+                {/* Large faded background numeral */}
+                <div
+                  className="absolute -top-4 -right-2 font-display font-bold text-[7rem] leading-none select-none pointer-events-none opacity-[0.03] group-hover:opacity-[0.06] transition-opacity duration-300"
+                  aria-hidden
+                >
+                  {pillar.num}
+                </div>
+
+                <div className={`w-10 h-10 rounded-xl ${pillar.iconBg} flex items-center justify-center mb-6 transition-colors`}>
                   <Icon size={20} className="text-brand-blue" />
                 </div>
                 <Badge variant="blue" className="mb-4 text-[10px]">

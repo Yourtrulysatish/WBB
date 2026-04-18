@@ -3,7 +3,18 @@
 import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
+
+const particles = [
+  { size: 3, top: "18%", left: "12%", delay: "0s", duration: "float" },
+  { size: 2, top: "72%", left: "8%", delay: "1.5s", duration: "float-slow" },
+  { size: 4, top: "35%", left: "88%", delay: "0.8s", duration: "float-slower" },
+  { size: 2, top: "80%", left: "82%", delay: "2s", duration: "float" },
+  { size: 3, top: "55%", left: "93%", delay: "1s", duration: "float-slow" },
+  { size: 2, top: "22%", left: "78%", delay: "3s", duration: "float" },
+  { size: 3, top: "65%", left: "20%", delay: "2.5s", duration: "float-slower" },
+  { size: 2, top: "10%", left: "55%", delay: "0.3s", duration: "float-slow" },
+];
 
 export function Hero() {
   const heroRef = useRef<HTMLElement>(null);
@@ -29,7 +40,7 @@ export function Hero() {
       style={
         {
           background:
-            "radial-gradient(ellipse 80% 60% at var(--mouse-x, 50%) var(--mouse-y, 40%), rgba(37,99,235,0.07) 0%, transparent 70%), #0A0A0A",
+            "radial-gradient(ellipse 80% 60% at var(--mouse-x, 50%) var(--mouse-y, 40%), rgba(37,99,235,0.09) 0%, transparent 70%), #0A0A0A",
         } as React.CSSProperties
       }
     >
@@ -51,8 +62,30 @@ export function Hero() {
         }}
       />
 
-      {/* Glow orb */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-blue-600/[0.04] blur-[140px] pointer-events-none" />
+      {/* Primary breathing glow orb */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-blue-600/[0.05] blur-[140px] pointer-events-none animate-breathe" />
+
+      {/* Secondary smaller orb — offset */}
+      <div
+        className="absolute top-[55%] left-[35%] w-[400px] h-[400px] rounded-full bg-indigo-500/[0.04] blur-[100px] pointer-events-none animate-float-slow"
+        style={{ animationDelay: "2s" }}
+      />
+
+      {/* Floating particles */}
+      {particles.map((p, i) => (
+        <div
+          key={i}
+          className={`absolute rounded-full bg-blue-400/30 pointer-events-none animate-${p.duration}`}
+          style={{
+            width: p.size,
+            height: p.size,
+            top: p.top,
+            left: p.left,
+            animationDelay: p.delay,
+            boxShadow: `0 0 ${p.size * 3}px rgba(96,165,250,0.5)`,
+          }}
+        />
+      ))}
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center">
         <div className="animate-fade-up">
@@ -92,7 +125,7 @@ export function Hero() {
           </Button>
         </div>
 
-        {/* Honest social proof strip */}
+        {/* Social proof strip */}
         <div
           className="mt-16 flex flex-wrap items-center justify-center gap-6 text-sm text-brand-muted animate-fade-up"
           style={{ animationDelay: "0.4s", animationFillMode: "both" }}
@@ -103,6 +136,19 @@ export function Hero() {
           <span className="text-brand-border">·</span>
           <span>3+ years operating</span>
         </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 animate-fade-up"
+        style={{ animationDelay: "0.8s", animationFillMode: "both" }}
+      >
+        <span className="text-[10px] uppercase tracking-widest text-white/20 font-medium">scroll</span>
+        <ChevronDown
+          size={16}
+          className="text-white/20 animate-float"
+          style={{ animationDuration: "2s" }}
+        />
       </div>
     </section>
   );

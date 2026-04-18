@@ -17,7 +17,7 @@ const pillars = [
     title: "Brand",
     headline: "Build a brand people trust and remember.",
     description:
-      "Your brand is your most valuable asset. We build it from the ground up, from positioning strategy to visual identity, so it commands attention, builds trust, and justifies premium pricing.",
+      "Your brand is your most valuable asset. We build it from scratch, shaping positioning strategy, visual identity, and messaging so it commands attention, builds trust, and justifies premium pricing.",
     services: [
       {
         name: "Brand Strategy",

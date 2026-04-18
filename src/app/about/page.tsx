@@ -34,11 +34,11 @@ const values = [
 
 const team = [
   { name: "Satish Chand", role: "Founder & Creative Director", initials: "SC" },
-  { name: "Strategy Lead", role: "Brand & Growth Strategy", initials: "SL" },
-  { name: "Design Lead", role: "Visual Design & UI/UX", initials: "DL" },
-  { name: "Content Lead", role: "Content & Copywriting", initials: "CL" },
-  { name: "Digital Lead", role: "SEO & Performance Marketing", initials: "DM" },
-  { name: "Tech Lead", role: "Web & Systems Development", initials: "TL" },
+  { name: "Brand & Strategy", role: "Positioning & Growth Strategy", initials: "BS" },
+  { name: "Visual Design", role: "Identity & UI/UX", initials: "VD" },
+  { name: "Content & Copy", role: "Content Strategy & Writing", initials: "CC" },
+  { name: "Performance", role: "SEO & Paid Marketing", initials: "PM" },
+  { name: "Tech & Systems", role: "Web & AI Development", initials: "TS" },
 ];
 
 export default function AboutPage() {
@@ -163,10 +163,13 @@ export default function AboutPage() {
               The Team
             </Badge>
             <h2 className="font-display text-display-md font-bold text-white">
-              The humans behind
+              The team behind
               <br />
               <span className="gradient-text">your growth.</span>
             </h2>
+            <p className="text-brand-muted mt-4 max-w-md mx-auto text-sm">
+              Full team profiles coming soon. We keep client work first.
+            </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
             {team.map((member) => (

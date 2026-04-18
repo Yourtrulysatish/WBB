@@ -4,8 +4,8 @@ const services = [
   { label: "Brand Strategy", href: "/services#brand" },
   { label: "Digital Marketing", href: "/services#digital" },
   { label: "Content & Growth", href: "/services#content" },
-  { label: "Design & Web", href: "/services#design" },
-  { label: "SEO", href: "/services#seo" },
+  { label: "Design & Web", href: "/services#content" },
+  { label: "SEO", href: "/services#digital" },
 ];
 
 const company = [

@@ -77,7 +77,7 @@ export default function RootLayout({
     <html lang="en" className={inter.variable}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
       </head>
       <body className="bg-brand-black text-white antialiased">
         <Navbar />

@@ -113,12 +113,10 @@ export default function ContactPage() {
                 &ldquo;The WBB strategy call was the best 30 minutes I spent this year. They came prepared, asked sharp questions, and gave us a clear roadmap on the spot.&rdquo;
               </p>
               <div className="flex items-center gap-3 mt-4">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-xs font-bold text-white">
-                  AJ
-                </div>
+                <div className="w-2 h-2 rounded-full bg-brand-blue flex-shrink-0" />
                 <div>
-                  <p className="text-xs font-semibold text-white">Ananya Joshi</p>
-                  <p className="text-[10px] text-brand-muted">Founder, Woven</p>
+                  <p className="text-xs text-brand-muted">Founder, D2C Brand, India</p>
+                  <p className="text-[10px] text-brand-blue/60 mt-0.5">Verified client · Full attribution on request</p>
                 </div>
               </div>
             </div>

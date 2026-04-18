@@ -43,7 +43,7 @@ export function FadeIn({ children, className, delay = 0, direction = "up" }: Fad
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "none" : transforms[direction],
-        transition: `opacity 0.65s ease ${delay}s, transform 0.65s ease ${delay}s`,
+        transition: `opacity 0.65s ease ${delay / 1000}s, transform 0.65s ease ${delay / 1000}s`,
       }}
     >
       {children}

@@ -17,6 +17,14 @@ export function FadeIn({ children, className, delay = 0, direction = "up" }: Fad
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    // If already in viewport on mount, show immediately
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      setVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -24,7 +32,10 @@ export function FadeIn({ children, className, delay = 0, direction = "up" }: Fad
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      {
+        threshold: 0,
+        rootMargin: "0px 0px -60px 0px",
+      }
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -43,7 +54,7 @@ export function FadeIn({ children, className, delay = 0, direction = "up" }: Fad
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "none" : transforms[direction],
-        transition: `opacity 0.65s ease ${delay / 1000}s, transform 0.65s ease ${delay / 1000}s`,
+        transition: `opacity 0.6s ease ${delay / 1000}s, transform 0.6s ease ${delay / 1000}s`,
       }}
     >
       {children}
